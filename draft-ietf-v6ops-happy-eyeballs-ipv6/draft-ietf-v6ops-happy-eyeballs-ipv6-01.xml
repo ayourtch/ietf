@@ -5,6 +5,7 @@
 <!ENTITY rfc4960 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.4960.xml">
 <!ENTITY rfc1671 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.1671.xml">
 <!ENTITY rfc2766 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.2766.xml">
+<!ENTITY rfc2782 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.2782.xml">
 <!ENTITY rfc3484 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.3484.xml">
 <!ENTITY rfc4966 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.4966.xml">
 <!ENTITY rfc4074 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.4074.xml">
@@ -263,6 +264,7 @@ working, and IPv4 is abandoned (12).</t>
     
         </section>
         <section anchor="client_v6_details" title="Implementation details">
+        <section anchor="client_with_address_records" title="Applications that use address records">
 
         <t>This section details how to provide robust dual stack service for
         both IPv6 and IPv4, so that the user perceives very fast application
@@ -361,6 +363,53 @@ application-wide value of P.  A positive value indicates a preference for IPv6 a
 Links web browser <xref target="links"></xref> is available at <xref
 target="64-impl"></xref>.</t> 
 -->
+</section>
+<section anchor="srv_clients" title="Applications that use the SRV records">
+<t>
+For the purposes of this section, "client" is defined as the entity
+initiating the connection.
+</t>
+<t>
+For protocols which support DNS SRV <xref target="RFC2782"></xref>, the client performs the IN
+SRV query (e.g. IN SRV _xmpp-client._tcp.example.com) as normal.  The
+client MUST perform the following steps:
+</t>
+<t>
+<list style="numbers">
+<t>Sort all SRV records according to priority (lowest priority first)
+</t>
+<t>
+Process all of the SRV targets of the same priority with a weight
+greater than 0:
+<list style="letters">
+    <t>Perform A/AAAA queries for each SRV target in parallel, as
+ described in <xref target="client_with_address_records"></xref></t> 
+    <t>Connect to the IPv4/IPv6 addresses</t>
+    <t>If at least one connection succeeds, stop processing SRV
+ records</t>
+ </list>
+ </t>
+ <t>If there is no connection, process all of the SRV targets of the
+ same priority with a weight of 0, as per steps 2.1 through 2.3 above
+ </t> 
+ <t>Repeat steps 2.1 through 2.3 for the next priority, until a
+ connection is established or all SRV records have been exhausted
+ </t>
+ <t>If there is still no connection, fallback to using the domain (e.g.
+ example.com), following steps 2.1 through 2.3 above
+ </t>
+</list>
+</t>
+<t>
+ It is RECOMMENDED, but not required, for the client to cache the
+ winning connection's address information and reuse it on subsequent
+ connections. If a significant network event occurs (e.g. network
+ interface is activated/deactivated, IP address changes), the client
+ MUST forget the cached address information and perform all of the steps
+ from above. The definition of "significant network event" is
+ intentionally vague.
+</t>
+</section>
 </section>
 </section>
 
@@ -551,6 +600,8 @@ Cameron Byrne, Mark Smith, Gert Doering, Martin Millnert, Tim Durack, Matthew Pa
       &rfc2119;
 
       &rfc3484;
+      
+      &rfc2782;
 
     </references>
 
@@ -682,55 +733,5 @@ omed-server-over-tcp">
 </rfc>
 
 <!---
-
-change list
-
-dba->db8, thanks to Matthew Palmer.
-
------
-
-TODO:
-
----- Matt Miller:
-
-> SRV-based Protocols
-> -------------------
-> 
-> For the purposes of this section, "client" is defined as the entity
-> initiating the connection.
-> 
-> For protocols which support DNS SRV[xxxx], the client performs the IN
-> SRV query (e.g. IN SRV _xmpp-client._tcp.example.com) as normal.  The
-> client MUST perform the following steps:
-> 
-> 1. Sort all SRV records according to priority (lowest priority first)
-> 2. Process all of the SRV targets of the same priority with a weight
-> greater than 0:
->    2.1. Perform A/AAAA queries for each SRV target in parallel, as
-> described in [SECTION x.1.]
->    2.2. Connect to the IPv4/IPv6 addresses
->    2.3. If at least one connection succeeds, stop processing SRV
-> records
-> 3. If there is no connection, process all of the SRV targets of the
-> same priority with a weight of 0, as per steps 2.1 through 2.3 above
-> 4. Repeat steps 2.1 through 2.3 for the next priority, until a
-> connection is established or all SRV records have been exhausted
-> 5. If there is still no connection, fallback to using the domain (e.g.
-> example.com), following steps 2.1 through 2.3 above
-> 
-> It is RECOMMENDED, but not required, for the client to cache the
-> winning connection's address information and reuse it on subsequent
-> connections. If a significant network event occurs (e.g. network
-> interface is activated/deactivated, IP address changes), the client
-> MUST forget the cached address information and perform all of the steps
-> from above. The definition of "significant network event" is
-> intentionally vague.
-> 
-> ---- END BEGIN ----
-> 
-> 
-
-
-
 -->
 
