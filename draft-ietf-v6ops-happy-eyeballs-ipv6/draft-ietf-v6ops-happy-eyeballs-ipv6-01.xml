@@ -11,6 +11,7 @@
 <!ENTITY rfc4074 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.4074.xml">
 <!ENTITY rfc5245 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.5245.xml">
 <!ENTITY I-D.natarajan-http-over-sctp SYSTEM "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.natarajan-http-over-sctp.xml">
+<!ENTITY I-D.chen-mif-happy-eyeballs-extension "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.draft-chen-mif-happy-eyeballs-extension.xml">
 ]>
 <?xml-stylesheet type='text/xsl' href='rfc2629.xslt' ?>
 <?rfc toc="yes" ?>
