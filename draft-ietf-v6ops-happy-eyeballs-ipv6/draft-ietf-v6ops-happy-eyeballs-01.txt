@@ -8,7 +8,7 @@ Expires:  September 15, 2011                              March 14, 2011
 
 
      Happy Eyeballs: Trending Towards Success with Dual-Stack Hosts
-                draft-ietf-v6ops-happy-eyeballs-ipv6-00
+                   draft-ietf-v6ops-happy-eyeballs-01
 
 Abstract
 

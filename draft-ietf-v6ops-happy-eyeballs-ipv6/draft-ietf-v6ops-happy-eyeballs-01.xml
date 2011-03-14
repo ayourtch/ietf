@@ -24,7 +24,7 @@
 <?rfc sortrefs="yes" ?>
 <?rfc colonspace='yes' ?>
 <?rfc tocindent='yes' ?>
-<rfc category="std" docName="draft-ietf-v6ops-happy-eyeballs-ipv6-00" ipr="trust200902">
+<rfc category="std" docName="draft-ietf-v6ops-happy-eyeballs-01" ipr="trust200902">
   <front>
     <title abbrev="Happy Eyeballs Dual Stack">Happy Eyeballs:
     Trending Towards Success with Dual-Stack Hosts</title>
