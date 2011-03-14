@@ -4,7 +4,7 @@
 v6ops                                                            D. Wing
 Internet-Draft                                            A. Yourtchenko
 Intended status:  Standards Track                                  Cisco
-Expires:  September 13, 2011                              March 12, 2011
+Expires:  September 15, 2011                              March 14, 2011
 
 
      Happy Eyeballs: Trending Towards Success with Dual-Stack Hosts
@@ -32,7 +32,7 @@ Status of this Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on September 13, 2011.
+   This Internet-Draft will expire on September 15, 2011.
 
 Copyright Notice
 
@@ -52,7 +52,7 @@ Copyright Notice
 
 
 
-Wing & Yourtchenko     Expires September 13, 2011               [Page 1]
+Wing & Yourtchenko     Expires September 15, 2011               [Page 1]
 
 Internet-Draft          Happy Eyeballs Dual Stack             March 2011
 
@@ -108,7 +108,7 @@ Table of Contents
 
 
 
-Wing & Yourtchenko     Expires September 13, 2011               [Page 2]
+Wing & Yourtchenko     Expires September 15, 2011               [Page 2]
 
 Internet-Draft          Happy Eyeballs Dual Stack             March 2011
 
@@ -164,7 +164,7 @@ Internet-Draft          Happy Eyeballs Dual Stack             March 2011
 
 
 
-Wing & Yourtchenko     Expires September 13, 2011               [Page 3]
+Wing & Yourtchenko     Expires September 15, 2011               [Page 3]
 
 Internet-Draft          Happy Eyeballs Dual Stack             March 2011
 
@@ -220,7 +220,7 @@ Internet-Draft          Happy Eyeballs Dual Stack             March 2011
 
 
 
-Wing & Yourtchenko     Expires September 13, 2011               [Page 4]
+Wing & Yourtchenko     Expires September 15, 2011               [Page 4]
 
 Internet-Draft          Happy Eyeballs Dual Stack             March 2011
 
@@ -276,7 +276,7 @@ Internet-Draft          Happy Eyeballs Dual Stack             March 2011
 
 
 
-Wing & Yourtchenko     Expires September 13, 2011               [Page 5]
+Wing & Yourtchenko     Expires September 15, 2011               [Page 5]
 
 Internet-Draft          Happy Eyeballs Dual Stack             March 2011
 
@@ -332,7 +332,7 @@ Internet-Draft          Happy Eyeballs Dual Stack             March 2011
 
 
 
-Wing & Yourtchenko     Expires September 13, 2011               [Page 6]
+Wing & Yourtchenko     Expires September 15, 2011               [Page 6]
 
 Internet-Draft          Happy Eyeballs Dual Stack             March 2011
 
@@ -388,7 +388,7 @@ Internet-Draft          Happy Eyeballs Dual Stack             March 2011
 
 
 
-Wing & Yourtchenko     Expires September 13, 2011               [Page 7]
+Wing & Yourtchenko     Expires September 15, 2011               [Page 7]
 
 Internet-Draft          Happy Eyeballs Dual Stack             March 2011
 
@@ -444,7 +444,7 @@ Internet-Draft          Happy Eyeballs Dual Stack             March 2011
 
 
 
-Wing & Yourtchenko     Expires September 13, 2011               [Page 8]
+Wing & Yourtchenko     Expires September 15, 2011               [Page 8]
 
 Internet-Draft          Happy Eyeballs Dual Stack             March 2011
 
@@ -500,7 +500,7 @@ Internet-Draft          Happy Eyeballs Dual Stack             March 2011
 
 
 
-Wing & Yourtchenko     Expires September 13, 2011               [Page 9]
+Wing & Yourtchenko     Expires September 15, 2011               [Page 9]
 
 Internet-Draft          Happy Eyeballs Dual Stack             March 2011
 
@@ -556,7 +556,7 @@ Internet-Draft          Happy Eyeballs Dual Stack             March 2011
 
 
 
-Wing & Yourtchenko     Expires September 13, 2011              [Page 10]
+Wing & Yourtchenko     Expires September 15, 2011              [Page 10]
 
 Internet-Draft          Happy Eyeballs Dual Stack             March 2011
 
@@ -612,7 +612,7 @@ Internet-Draft          Happy Eyeballs Dual Stack             March 2011
 
 
 
-Wing & Yourtchenko     Expires September 13, 2011              [Page 11]
+Wing & Yourtchenko     Expires September 15, 2011              [Page 11]
 
 Internet-Draft          Happy Eyeballs Dual Stack             March 2011
 
@@ -621,7 +621,8 @@ Internet-Draft          Happy Eyeballs Dual Stack             March 2011
 
    Interaction of the suggestions in this document with multiple
    interfaces, and interaction with the MIF working group, is for
-   further study.
+   further study ([I-D.chen-mif-happy-eyeballs-extension] is devoted to
+   this).
 
 
 6.  Content Provider Recommendations
@@ -667,8 +668,7 @@ Internet-Draft          Happy Eyeballs Dual Stack             March 2011
 
 
 
-
-Wing & Yourtchenko     Expires September 13, 2011              [Page 12]
+Wing & Yourtchenko     Expires September 15, 2011              [Page 12]
 
 Internet-Draft          Happy Eyeballs Dual Stack             March 2011
 
@@ -703,6 +703,11 @@ Internet-Draft          Happy Eyeballs Dual Stack             March 2011
               over same source port", June 2009,
               <https://bugzilla.redhat.com/show_bug.cgi?id=505105>.
 
+   [I-D.chen-mif-happy-eyeballs-extension]
+              Chen, G., "Happy Eyeballs Extension for Multiple
+              Interfaces", draft-chen-mif-happy-eyeballs-extension-00
+              (work in progress), March 2011.
+
    [Perreault]
               Perreault, S., "Happy Eyeballs in Erlang", February 2011,
               <http://www.viagenie.ca/news/
@@ -716,18 +721,19 @@ Internet-Draft          Happy Eyeballs Dual Stack             March 2011
               February 2000.
 
    [RFC4074]  Morishita, Y. and T. Jinmei, "Common Misbehavior Against
+
+
+
+Wing & Yourtchenko     Expires September 15, 2011              [Page 13]
+
+Internet-Draft          Happy Eyeballs Dual Stack             March 2011
+
+
               DNS Queries for IPv6 Addresses", RFC 4074, May 2005.
 
    [RFC4966]  Aoun, C. and E. Davies, "Reasons to Move the Network
               Address Translator - Protocol Translator (NAT-PT) to
               Historic Status", RFC 4966, July 2007.
-
-
-
-Wing & Yourtchenko     Expires September 13, 2011              [Page 13]
-
-Internet-Draft          Happy Eyeballs Dual Stack             March 2011
-
 
    [RFC5245]  Rosenberg, J., "Interactive Connectivity Establishment
               (ICE): A Protocol for Network Address Translator (NAT)
@@ -774,11 +780,5 @@ Authors' Addresses
 
 
 
-
-
-
-
-
-
-Wing & Yourtchenko     Expires September 13, 2011              [Page 14]
+Wing & Yourtchenko     Expires September 15, 2011              [Page 14]
 

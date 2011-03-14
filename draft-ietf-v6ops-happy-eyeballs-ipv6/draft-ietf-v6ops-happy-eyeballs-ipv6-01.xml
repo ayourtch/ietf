@@ -11,7 +11,7 @@
 <!ENTITY rfc4074 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.4074.xml">
 <!ENTITY rfc5245 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.5245.xml">
 <!ENTITY I-D.natarajan-http-over-sctp SYSTEM "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.natarajan-http-over-sctp.xml">
-<!ENTITY I-D.chen-mif-happy-eyeballs-extension "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.draft-chen-mif-happy-eyeballs-extension.xml">
+<!ENTITY I-D.chen-mif-happy-eyeballs-extension SYSTEM "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.chen-mif-happy-eyeballs-extension.xml">
 ]>
 <?xml-stylesheet type='text/xsl' href='rfc2629.xslt' ?>
 <?rfc toc="yes" ?>
@@ -546,7 +546,7 @@ This needs more analysis.]]</t>
       <section title="Multiple Interfaces">
         <t>Interaction of the suggestions in this document with
         multiple interfaces, and interaction with the MIF working
-        group, is for further study.</t>
+        group, is for further study (<xref target="I-D.chen-mif-happy-eyeballs-extension"></xref> is devoted to this).</t>
       </section>
     </section>
 
@@ -617,6 +617,8 @@ Cameron Byrne, Mark Smith, Gert Doering, Martin Millnert, Tim Durack, Matthew Pa
       &rfc4074;
 
 &rfc5245;
+
+      &I-D.chen-mif-happy-eyeballs-extension;
 
 
       <reference anchor="whitelist"
